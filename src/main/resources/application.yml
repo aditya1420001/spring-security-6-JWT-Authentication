@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-security
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret-key: f048f7899bca99fc2c3873b93cc091aab98db1e9d90c2bd8ea97ead3bef89822 # To be passed by env variables
+
+server:
+  servlet:
+    context-path: /spring-security/api
+
+
